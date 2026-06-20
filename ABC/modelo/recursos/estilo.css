@@ -1,0 +1,98 @@
+
+.root {
+    -fx-cafe-oscuro:   #4A2E1E;
+    -fx-cafe-medio:    #7B4B2A;
+    -fx-mostaza:       #FFB280;
+    -fx-verde-salvia:  #8A9A5B;
+    -fx-crema:         #FAF3E0;
+    -fx-terracota:     #C56B4E;
+
+    -fx-font-family: "Georgia";
+}
+
+
+.fondo-principal {
+    -fx-background-color: -fx-crema;
+}
+
+
+/*Encabezado del menú*/
+.encabezado {
+    -fx-background-image: url("estanteria.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-padding: 24 20 24 20;
+}
+
+.titulo-encabezado {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-crema;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 4, 0.4, 0, 1);
+}
+
+.subtitulo {
+    -fx-font-size: 13px;
+    -fx-text-fill: -fx-mostaza;
+    -fx-font-style: italic;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 4, 0.4, 0, 1);
+}
+
+/*Botones del menú*/
+.boton-menu {
+    -fx-background-color: white;
+    -fx-text-fill: -fx-cafe-oscuro;
+    -fx-font-size: 14px;
+    -fx-border-color: -fx-mostaza;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10 16 10 16;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+
+.boton-menu:hover {
+    -fx-background-color: -fx-mostaza;
+    -fx-text-fill: white;
+}
+
+/* botón de salir*/
+.boton-salir {
+    -fx-background-color: -fx-terracota;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-color: -fx-cafe-oscuro;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10 16 10 16;
+    -fx-cursor: hand;
+}
+
+.boton-salir:hover {
+    -fx-background-color: derive(-fx-terracota, -15%);
+}
+
+.tarjeta {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: -fx-verde-salvia;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-padding: 16px;
+}
+
+/* Etiquetas de texto */
+.texto-normal {
+    -fx-text-fill: -fx-cafe-oscuro;
+    -fx-font-size: 13px;
+}
+
+/*Campos de texto*/
+.text-field, .text-area, .combo-box {
+    -fx-background-color: -fx-crema;
+    -fx-border-color: -fx-verde-salvia;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
