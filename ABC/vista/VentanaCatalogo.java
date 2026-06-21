@@ -78,6 +78,7 @@ public class VentanaCatalogo {
         tabla.getColumns().add(colEditorial);
         tabla.getColumns().add(colGenero);
         tabla.getColumns().add(colEstado);
+        tabla.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
 
         cargarTodos(tabla);
 
@@ -110,7 +111,9 @@ public class VentanaCatalogo {
         raiz.setTop(encabezado);
         raiz.setCenter(tabla);
 
-        VBox pie = new VBox(btnCerrar);
+        Label lblTotal = new Label("Total de libros registrados: " + bib.getTotalLibros());
+        
+        VBox pie = new VBox(10, lblTotal, btnCerrar);
         pie.setPadding(new Insets(10, 20, 15, 20));
         raiz.setBottom(pie);
 
