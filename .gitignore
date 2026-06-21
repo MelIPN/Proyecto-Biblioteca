@@ -1,0 +1,7 @@
+*.class
+out/
+bin/
+javafx-sdk*/
+*.zip
+.DS_Store
+Thumbs.db
