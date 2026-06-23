@@ -112,6 +112,15 @@ public abstract class Biblioteca {
         int total = (prefijo.equals("E") ? empleados.size() : lectores.size()) + 1;
         return prefijo + String.format("%03d", total);
     }
+    /*
+        if (prefijo.equals("E")) {
+            total = empleados.size();
+            } else {
+            total = lectores.size();
+        }
+        total = total + 1;
+        return prefijo + String.format("%03d", total);
+    */
 
     public void registrarPrestamo(RegistroPrestamo r) { prestamos.add(r); }
 

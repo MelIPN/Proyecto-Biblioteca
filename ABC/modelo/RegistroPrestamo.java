@@ -58,6 +58,20 @@ public class RegistroPrestamo {
         return diasRetraso * CUOTA_POR_DIA_RETRASO;
     }
 
+    /*
+     public double calcularCuotaDemora() {
+        LocalDate referencia = LocalDate.now();
+        if fechaDevolucionReal != null) {
+            referencia = fechaDevolucionReal;
+        }
+        long diasRetraso = ChronoUnit.DAYS.between(fechaDevolucionEsperada, referencia);
+        if (diasRetraso <= 0) {
+            return 0.0;
+        }
+        return diasRetraso * CUOTA_POR_DIA_RETRASO;
+    }
+    */
+
     public String generarRecibo() {
         StringBuilder sb = new StringBuilder();
         sb.append("RECIBO DE PRÉSTAMO\n");
@@ -65,6 +79,13 @@ public class RegistroPrestamo {
         sb.append("Libro                : ").append(libro.getTitulo()).append(" (").append(libro.getCodigo()).append(")\n");
         sb.append("Lector               : ").append(lector.getNombre()).append(" ").append(lector.getApellido()).append("\n");
         sb.append("Domicilio de entrega : ").append(domicilioEntrega).append("\n");
+        /*
+            String nombreEmpleado = "N/A";
+            if (empleadoGestor != null) {
+                nombreEmpleado = empleadoGestor.getNombre() + " " + empleadoGestor.getApellido();
+            }
+            sb.append("Atendido por         : ").append(nombreEmpleado).append("\n");
+        */
         sb.append("Atendido por         : ").append(empleadoGestor != null ? empleadoGestor.getNombre() + " " + empleadoGestor.getApellido() : "N/A").append("\n");
         sb.append("Días solicitados     : ").append(diasSolicitados).append("\n");
         sb.append("Fecha de préstamo    : ").append(fechaPrestamo).append("\n");
@@ -77,5 +98,13 @@ public class RegistroPrestamo {
         return "Préstamo #" + numeroPrestamo + " — " + libro.getTitulo()
              + " → " + lector.getNombre() + " " + lector.getApellido()
              + (devuelto ? " (Devuelto)" : " (Activo, vence " + fechaDevolucionEsperada + ")");
+        /*
+            if (devuelto) {
+                estado = "Devuelto";
+            } else {
+                estado = "Activo, vence " + fechaDevolucionEsperada;
+            }
+            return "Préstamo #" + numeroPrestamo + " — " + libro.getTitulo() + " → " + lector.getNombre() + " " + lector.getApellido() + "
+        */
     }
 }

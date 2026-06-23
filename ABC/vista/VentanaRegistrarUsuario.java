@@ -117,6 +117,14 @@ public class VentanaRegistrarUsuario {
                             "Las horas de lectura deben ser un número.");
                     return;
                 }
+
+                /*
+                    double horas = 0.0;
+                    if (!campoHoras.getText().trim().isEmpty()) {
+                        horas = Double.parseDouble(campoHoras.getText().trim());
+                    }
+                */
+               
                 String id = bib.generarIdUsuario("L");
                 Lector nuevo = new Lector(id, nombre, apellido, telefono, correo,
                         genero, horas, vigencia);

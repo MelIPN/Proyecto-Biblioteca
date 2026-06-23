@@ -79,6 +79,14 @@ public class Libro implements Prestamo {
         return "Prestado a: " + nombre;
     }
 
+    /* 
+        String nombre = "desconocido"
+        if (lectorActual != null) {
+            nombre = lectorActual.getNombre();
+        }
+        return "Prestado a: " + nombre;
+    */
+
     @Override
     public String toString() {
         return "[" + codigo + "] " + titulo + " — " + autor
