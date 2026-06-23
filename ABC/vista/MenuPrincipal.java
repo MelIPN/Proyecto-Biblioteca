@@ -19,7 +19,6 @@ public class MenuPrincipal {
 
     public void mostrar(Stage stage) {
 
-        // Encabezado
         Label titulo = new Label(" " + bib.getNombre());
         titulo.getStyleClass().add("titulo-encabezado");
 
@@ -30,7 +29,6 @@ public class MenuPrincipal {
         encabezado.getStyleClass().add("encabezado");
         encabezado.setAlignment(Pos.CENTER);
 
-        // ===== Botones del menú =====
         Button btnCatalogo  = crearBoton("Mostrar catálogo de libros");
         Button btnUsuarios  = crearBoton("Registrar usuarios");
         Button btnLibros    = crearBoton("Registrar libros");
@@ -38,13 +36,12 @@ public class MenuPrincipal {
         Button btnDevolver  = crearBoton("Devolver libro");
         Button btnDatos     = crearBoton("Datos de la biblioteca");
 
-        // conectar cada botón con su ventana =====
-btnCatalogo.setOnAction(e -> new VentanaCatalogo(bib, stage).mostrar());
-btnUsuarios.setOnAction(e -> new VentanaRegistrarUsuario(bib, stage).mostrar());
-btnLibros.setOnAction(e -> new VentanaRegistrarLibro(bib, stage).mostrar());
-btnPrestamo.setOnAction(e -> new VentanaPrestamo(bib, stage).mostrar());
-btnDevolver.setOnAction(e -> new VentanaDevolver(bib, stage).mostrar());
-btnDatos.setOnAction(e -> new VentanaDatos(bib, stage).mostrar());
+        btnCatalogo.setOnAction(e -> new VentanaCatalogo(bib, stage).mostrar());
+        btnUsuarios.setOnAction(e -> new VentanaRegistrarUsuario(bib, stage).mostrar());
+        btnLibros.setOnAction(e -> new VentanaRegistrarLibro(bib, stage).mostrar());
+        btnPrestamo.setOnAction(e -> new VentanaPrestamo(bib, stage).mostrar());
+        btnDevolver.setOnAction(e -> new VentanaDevolver(bib, stage).mostrar());
+        btnDatos.setOnAction(e -> new VentanaDatos(bib, stage).mostrar());
 
         Button btnSalir = new Button("Salir");
         btnSalir.getStyleClass().add("boton-salir");

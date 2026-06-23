@@ -3,7 +3,6 @@ package modelo;
 
 public class Libro implements Prestamo {
 
-    // Atributos
     private String  codigo;       
     private String  titulo;
     private String  autor;
@@ -15,7 +14,6 @@ public class Libro implements Prestamo {
 
     private Empleado empleadoGestor;
 
-    // Constructores 
     public Libro() {
         this.disponible   = true;
         this.lectorActual = null;
@@ -68,7 +66,6 @@ public class Libro implements Prestamo {
         this.empleadoGestor = empleado;
     }
 
-    /** Devuelve el libro*/
     @Override
     public void devolver() {
         this.disponible   = true;

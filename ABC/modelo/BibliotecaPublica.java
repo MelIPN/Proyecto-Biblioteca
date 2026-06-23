@@ -9,9 +9,7 @@ public class BibliotecaPublica extends Biblioteca {
         super();
     }
 
-    public BibliotecaPublica(String nombre, String numeroBiblioteca, String direccion,
-                              String telefono, String horario, int afluenciaEstimada,
-                              String municipio) {
+    public BibliotecaPublica(String nombre, String numeroBiblioteca, String direccion, String telefono, String horario, int afluenciaEstimada, String municipio) {
         super(nombre, numeroBiblioteca, direccion, telefono, horario, afluenciaEstimada);
         this.municipio = municipio;
     }

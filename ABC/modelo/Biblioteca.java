@@ -39,7 +39,6 @@ public abstract class Biblioteca {
         this.prestamos           = new ArrayList<>();
     }
 
-    //Getters
     public String getNombre()             { return nombre; }
     public String getNumeroBiblioteca()   { return numeroBiblioteca; }
     public String getDireccion()          { return direccion; }
@@ -51,15 +50,12 @@ public abstract class Biblioteca {
     public ArrayList<Lector> getLectores()    { return lectores; }
     public ArrayList<RegistroPrestamo> getPrestamos() { return prestamos; }
 
-    //Setters
     public void setNombre(String nombre)                       { this.nombre = nombre; }
     public void setNumeroBiblioteca(String numeroBiblioteca)   { this.numeroBiblioteca = numeroBiblioteca; }
     public void setDireccion(String direccion)                 { this.direccion = direccion; }
     public void setTelefono(String telefono)                   { this.telefono = telefono; }
     public void setHorario(String horario)                     { this.horario = horario; }
     public void setAfluenciaEstimada(int afluenciaEstimada)    { this.afluenciaEstimada = afluenciaEstimada; }
-
-    //Métodos sobre libros
 
     public void agregarLibro(Libro libro) { catalogoLibros.add(libro); }
 
@@ -97,8 +93,6 @@ public abstract class Biblioteca {
     public String generarCodigoLibro() {
         return "L" + String.format("%03d", catalogoLibros.size() + 1);
     }
-
-    //Métodos sobre usuarios
 
     public void registrarEmpleado(Empleado e) { empleados.add(e); }
     public void registrarLector(Lector l)     { lectores.add(l); }

@@ -36,7 +36,6 @@ public class VentanaRegistrarUsuario {
         Label titulo = new Label("Registrar nuevo usuario");
         titulo.getStyleClass().add("titulo-encabezado");
 
-        // Selección de tipo de usuario
         ToggleGroup grupoTipo = new ToggleGroup();
         RadioButton rbLector = new RadioButton("Lector");
         RadioButton rbEmpleado = new RadioButton("Empleado");
@@ -45,7 +44,6 @@ public class VentanaRegistrarUsuario {
         rbLector.setSelected(true);
         HBox filaTipo = new HBox(15, rbLector, rbEmpleado);
 
-        // Campos comunes
         TextField campoNombre = new TextField();
         campoNombre.setPromptText("Nombre");
         TextField campoApellido = new TextField();
@@ -55,7 +53,6 @@ public class VentanaRegistrarUsuario {
         TextField campoCorreo = new TextField();
         campoCorreo.setPromptText("Correo");
 
-        // Campos específicos de Lector
         TextField campoGenero = new TextField();
         campoGenero.setPromptText("Género preferido");
         TextField campoHoras = new TextField();
@@ -64,7 +61,6 @@ public class VentanaRegistrarUsuario {
         campoVigencia.setPromptText("Vigencia credencial (dd/mm/yyyy)");
         VBox panelLector = new VBox(8, campoGenero, campoHoras, campoVigencia);
 
-        // Campos específicos de Empleado
         TextField campoRol = new TextField();
         campoRol.setPromptText("Rol (ej. Bibliotecario)");
         TextField campoHorario = new TextField();

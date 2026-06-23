@@ -2,8 +2,8 @@ package modelo;
 
 public class Empleado extends Persona {
 
-    private String rol;              // Ej: "Bibliotecario", "Recepción", "Administrador"
-    private String horarioTrabajo;    // Ej: "Lun-Vie 9:00-17:00"
+    private String rol;             
+    private String horarioTrabajo;    
     private String fechaIngreso;
 
     public Empleado() {

@@ -48,8 +48,7 @@ public class VentanaDatos {
         raiz.setPadding(new Insets(20));
 
         Scene escena = new Scene(raiz, 420, 420);
-        escena.getStylesheets().add(
-                getClass().getResource("/modelo/recursos/estilo.css").toExternalForm());
+        escena.getStylesheets().add(getClass().getResource("/modelo/recursos/estilo.css").toExternalForm());
 
         stage.setScene(escena);
         stage.showAndWait();

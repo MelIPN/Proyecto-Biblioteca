@@ -5,7 +5,7 @@ public class Lector extends Persona {
 
     private String        preferenciaGenero;
     private double         horasLecturaSemanal;
-    private String        vigenciaCredencial;   // fecha de vencimiento dd/mm/yyyy
+    private String        vigenciaCredencial;  
     private ArrayList<Libro> librosPrestados;
 
     public Lector() {

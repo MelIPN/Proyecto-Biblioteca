@@ -32,7 +32,6 @@ public abstract class Persona {
     public void setTelefono(String telefono) { this.telefono = telefono; }
     public void setCorreo(String correo)     { this.correo   = correo; }
 
-    /**polimorfismo. */
     public abstract String mostrarDatos();
 
     @Override
